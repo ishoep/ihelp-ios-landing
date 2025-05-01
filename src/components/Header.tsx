@@ -8,7 +8,8 @@ const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
   
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'ru' ? 'uz' : 'ru');
+    // Change from function form to direct assignment
+    setLanguage(language === 'ru' ? 'uz' : 'ru');
   };
   
   return (
