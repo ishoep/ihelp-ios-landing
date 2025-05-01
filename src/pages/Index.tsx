@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, Telegram } from 'lucide-react';
+import { Instagram, Phone, MessageCircle } from 'lucide-react';
 import Header from '../components/Header';
 import ContactButton from '../components/ContactButton';
 
@@ -25,7 +25,7 @@ const Index = () => {
       <footer className="py-10 px-6">
         <div className="max-w-md mx-auto flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
           <ContactButton 
-            icon={Telegram} 
+            icon={MessageCircle} 
             label="Telegram" 
             href="https://t.me/ihelp_bukhara" 
           />
