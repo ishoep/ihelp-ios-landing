@@ -91,23 +91,78 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   
   .ios-button {
-    @apply flex gap-2 items-center justify-center px-6 py-3 rounded-xl text-white 
-           bg-ios-blue hover:opacity-90 transition-opacity duration-200 
-           shadow-sm font-medium;
+    @apply flex gap-2 items-center justify-center px-6 py-3 rounded-xl text-black 
+           bg-gradient-to-r from-white to-gray-100 hover:opacity-90 transition-opacity duration-200 
+           shadow-sm font-medium border border-gray-200;
   }
   
   .ios-card {
-    @apply bg-ios-card rounded-3xl shadow-sm border border-gray-100;
+    @apply bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-gray-100;
+  }
+  
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-lg rounded-3xl shadow-sm border border-gray-200;
   }
   
   .emoji {
     @apply text-3xl;
+  }
+  
+  /* Page Transitions */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .page-exit {
+    opacity: 1;
+  }
+  
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
