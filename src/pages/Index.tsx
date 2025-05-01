@@ -61,18 +61,18 @@ const Index = () => {
           <ContactButton 
             icon={MessageCircle} 
             label="Telegram" 
-            href="https://t.me/ihelp_bukhara" 
+            href="https://t.me/iHelp_Service_Bukhara" 
             color="bg-gradient-to-r from-white to-gray-50" 
           />
           <ContactButton 
             icon={Instagram} 
             label="Instagram" 
-            href="https://instagram.com/ihelp_bukhara" 
+            href="https://www.instagram.com/ihelp_service_buxara/a" 
             color="bg-gradient-to-r from-white to-gray-50" 
           />
           <ContactButton 
             icon={Phone} 
-            label="+998 90 123 4567" 
+            label="+998 93 491 4051" 
             href="tel:+998901234567" 
             color="bg-gradient-to-r from-white to-gray-50" 
           />
