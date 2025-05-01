@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, MessageCircle } from 'lucide-react';
+import { Instagram, Phone, MessageCircle, MapPin } from 'lucide-react';
 import Header from '../components/Header';
 import ContactButton from '../components/ContactButton';
 import { LanguageContext } from '../App';
@@ -10,12 +10,14 @@ const translations = {
   ru: {
     title: 'iHelp',
     description: 'Сервис Apple техники в Бухаре',
-    portfolio: 'Портфолио'
+    portfolio: 'Портфолио',
+    location: 'Наше местоположение'
   },
   uz: {
     title: 'iHelp',
     description: 'Buxorodagi Apple texnikasi servisi',
-    portfolio: 'Portfolio'
+    portfolio: 'Portfolio',
+    location: 'Bizning manzil'
   }
 };
 
@@ -53,6 +55,27 @@ const Index = () => {
           >
             {t.portfolio}
           </Link>
+        </div>
+        
+        {/* Map Location Section */}
+        <div className={`glass-card p-6 mt-8 max-w-md w-full transition-all duration-500 ${animationClasses}`}>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <MapPin className="text-ios-blue" />
+            <h2 className="text-xl font-semibold text-gray-800">{t.location}</h2>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1521.8676765352865!2d64.42675917320396!3d39.764777799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50076141cf25f9%3A0xc6120f90e030ea68!2siHelp%20Service!5e0!3m2!1sen!2sus!4v1683894531117!5m2!1sen!2sus" 
+              width="100%" 
+              height="300" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="iHelp Service Location"
+              className="w-full"
+            ></iframe>
+          </div>
         </div>
       </main>
       
