@@ -37,8 +37,12 @@ const Index = () => {
       
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-8 text-center">
         <div className={`glass-card p-8 max-w-md w-full space-y-6 transition-all duration-500 ${animationClasses}`}>
-          <div className="mb-6" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue' }}>
-            <span style={{ fontSize: '2.5rem' }}>🛠️</span>
+          <div className="mb-6 flex justify-center" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue' }}>
+            <img 
+              src="https://em-content.zobj.net/source/apple/419/hammer-and-wrench_1f6e0-fe0f.png" 
+              alt="Tool" 
+              className="w-16 h-16 object-contain"
+            />
           </div>
           <h1 className="text-3xl font-bold text-black">{t.title}</h1>
           <p className="text-gray-700 text-lg">{t.description}</p>
