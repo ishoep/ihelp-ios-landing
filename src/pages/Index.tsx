@@ -1,9 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Phone, MessageCircle } from 'lucide-react';
 import Header from '../components/Header';
 import ContactButton from '../components/ContactButton';
+import { LanguageContext } from '../App';
 
 const translations = {
   ru: {
@@ -19,7 +20,7 @@ const translations = {
 };
 
 const Index = () => {
-  const [language, setLanguage] = useState<'ru' | 'uz'>('ru');
+  const { language } = useContext(LanguageContext);
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -36,7 +37,9 @@ const Index = () => {
       
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-8 text-center">
         <div className={`glass-card p-8 max-w-md w-full space-y-6 transition-all duration-500 ${animationClasses}`}>
-          <div className="emoji mb-6">🛠️</div>
+          <div className="mb-6" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue' }}>
+            <span style={{ fontSize: '2.5rem' }}>🛠️</span>
+          </div>
           <h1 className="text-3xl font-bold text-black">{t.title}</h1>
           <p className="text-gray-700 text-lg">{t.description}</p>
           

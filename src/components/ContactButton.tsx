@@ -18,10 +18,10 @@ const ContactButton = ({ icon: Icon, label, href, color = "bg-gradient-to-r from
       className={`flex items-center justify-center gap-2 px-4 py-3 rounded-full 
                  ${color} text-black hover:opacity-90 transition-all duration-300 
                  shadow-sm border border-gray-200 backdrop-blur-sm w-full sm:w-auto
-                 hover:scale-105 transform`}
+                 hover:scale-105 transform whitespace-nowrap`}
     >
       <Icon size={20} />
-      <span className="font-medium">{label}</span>
+      <span className="font-medium truncate">{label}</span>
     </a>
   );
 };

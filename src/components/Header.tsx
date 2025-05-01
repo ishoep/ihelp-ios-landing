@@ -1,10 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Apple } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { LanguageContext } from '../App';
 
 const Header = () => {
-  const [language, setLanguage] = useState<'ru' | 'uz'>('ru');
+  const { language, setLanguage } = useContext(LanguageContext);
   
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'ru' ? 'uz' : 'ru');
